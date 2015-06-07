@@ -1,5 +1,5 @@
 import ceylon.language.meta.model {
-  ClosedType=Type, Function
+  ClosedType=Type, Function, AnyType
 }
 import ceylon.language.meta.declaration {
   FunctionDeclaration, TypeParameter
@@ -13,10 +13,10 @@ shared native class AppliedFunction<out Type, in Arguments>()
   shared actual native Type namedApply(Iterable<String->Anything> arguments);
 
   shared actual native FunctionDeclaration declaration;
-  shared actual native ClosedType<Type> type;
-  shared actual native ClosedType<Anything>? container;
-  shared actual native Map<TypeParameter, ClosedType> typeArguments;
-  shared actual native ClosedType<Anything>[] typeArgumentList;
+  shared actual native ClosedType<out Type> type;
+  shared actual native AnyType? container;
+  shared actual native Map<TypeParameter, AnyType> typeArguments;
+  shared actual native AnyType[] typeArgumentList;
 
   shared actual native String string;
   shared actual native Integer hash;

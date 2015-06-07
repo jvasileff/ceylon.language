@@ -213,7 +213,7 @@ public abstract class AppliedClassOrInterface<Type>
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Ignore
     @Override
-    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<? extends java.lang.Object>>
+    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<java.lang.Object>>
         ceylon.language.meta.model.Member<Container, Kind> getClassOrInterface(@Ignore TypeDescriptor $reifiedContainer, 
                                                                             @Ignore TypeDescriptor $reifiedKind, 
                                                                             String name){
@@ -228,11 +228,11 @@ public abstract class AppliedClassOrInterface<Type>
         @TypeParameter(value = "Kind", satisfies = "ceylon.language.meta.model::ClassOrInterface<ceylon.language::Anything,ceylon.language::Nothing>")
     })
     @TypeInfo("ceylon.language.meta.model::Member<Container,Kind>|ceylon.language::Null")
-    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<? extends java.lang.Object>>
+    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<java.lang.Object>>
         ceylon.language.meta.model.Member<Container, Kind> getClassOrInterface(@Ignore TypeDescriptor $reifiedContainer, 
                                                                             @Ignore TypeDescriptor $reifiedKind, 
                                                                             String name, 
-                                                                            @Name("types") @Sequenced Sequential<? extends ceylon.language.meta.model.Type<?>> types) {
+                                                                            @Name("types") @Sequenced Sequential<? extends ceylon.language.meta.model.Type<? extends Object>> types) {
         
         checkInit();
         final FreeClassOrInterface type = declaration.findType(name);
@@ -247,7 +247,7 @@ public abstract class AppliedClassOrInterface<Type>
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Ignore
     @Override
-    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<? extends java.lang.Object>>
+    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<java.lang.Object>>
         ceylon.language.meta.model.Member<Container, Kind> getDeclaredClassOrInterface(@Ignore TypeDescriptor $reifiedContainer, 
                                                                             @Ignore TypeDescriptor $reifiedKind, 
                                                                             String name){
@@ -262,7 +262,7 @@ public abstract class AppliedClassOrInterface<Type>
         @TypeParameter(value = "Kind", satisfies = "ceylon.language.meta.model::ClassOrInterface<ceylon.language::Anything,ceylon.language::Nothing>")
     })
     @TypeInfo("ceylon.language.meta.model::Member<Container,Kind>|ceylon.language::Null")
-    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<? extends java.lang.Object>>
+    public <Container, Kind extends ceylon.language.meta.model.ClassOrInterface<java.lang.Object>>
         ceylon.language.meta.model.Member<Container, Kind> getDeclaredClassOrInterface(@Ignore TypeDescriptor $reifiedContainer, 
                                                                             @Ignore TypeDescriptor $reifiedKind, 
                                                                             String name, 

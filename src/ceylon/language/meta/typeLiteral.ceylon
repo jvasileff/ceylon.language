@@ -7,5 +7,5 @@ import ceylon.language.meta.model { ClosedType = Type }
 
      assert(is Interface<List<Integer>> listOfIntegers = typeLiteral<List<Integer>>());
  "
-shared native ClosedType<Type> typeLiteral<out Type>()
+shared native ClosedType<Type> typeLiteral<Type>()
     given Type satisfies Anything;

@@ -8,15 +8,15 @@ import ceylon.language.meta.declaration {
 import ceylon.language.meta.model {
     Class, ClassOrInterface,
     MemberClass, Member,
-    AppliedType = Type
+    AppliedType = Type, AnyType
 }
 
 shared native class OpenClassWithConstructors(pkg, meta) satisfies ClassWithConstructorsDeclaration {
     shared Package pkg;
     shared Object meta;
-    shared native actual Class<Type, Arguments> classApply<Type=Anything, Arguments=Nothing>(AppliedType<Anything>* typeArguments)
+    shared native actual Class<Type, Arguments> classApply<Type=Anything, Arguments=Nothing>(AnyType* typeArguments)
         given Arguments satisfies Anything[];
-    shared native actual MemberClass<Container, Type, Arguments> memberClassApply<Container=Nothing, Type=Anything, Arguments=Nothing>(AppliedType<Object> containerType, AppliedType<Anything>* typeArguments)
+    shared native actual MemberClass<Container, Type, Arguments> memberClassApply<Container=Nothing, Type=Anything, Arguments=Nothing>(AppliedType<out Object> containerType, AnyType* typeArguments)
         given Arguments satisfies Anything[];
     shared native actual Boolean anonymous;
     shared native actual Boolean abstract;
@@ -45,9 +45,9 @@ shared native class OpenClassWithConstructors(pkg, meta) satisfies ClassWithCons
     shared native actual Kind[] memberDeclarations<Kind>()
         given Kind satisfies NestableDeclaration;
     shared native actual OpenType[] caseTypes;
-    shared native actual ClassOrInterface<Type> apply<Type=Anything>(AppliedType<Anything>* typeArguments);
-    shared native actual Member<Container, ClassOrInterface<Type>> & ClassOrInterface<Type> 
-        memberApply<Container=Nothing, Type=Anything>(AppliedType<Object> containerType, AppliedType<Anything>* typeArguments);
+    shared native actual ClassOrInterface<Type> apply<Type=Anything>(AnyType* typeArguments);
+    shared native actual Member<Container, ClassOrInterface<out Type>> & ClassOrInterface<out Type> 
+        memberApply<Container=Nothing, Type=Anything>(AppliedType<out Object> containerType, AnyType* typeArguments);
     shared native actual NestableDeclaration|Package container;
     shared native actual Kind[] annotatedMemberDeclarations<Kind, Annotation>()
         given Kind satisfies NestableDeclaration

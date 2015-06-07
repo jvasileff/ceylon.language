@@ -17,5 +17,5 @@ shared sealed interface FunctionModel<out Type=Anything, in Arguments=Nothing>
     shared formal actual FunctionDeclaration declaration;
 
     "This function's return closed type."
-    shared formal ClosedType<Type> type;
+    shared formal ClosedType<out Type> type;
 }

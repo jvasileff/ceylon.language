@@ -39,7 +39,7 @@ public final class annotations_ {
             final com.redhat.ceylon.compiler.java.runtime.model.TypeDescriptor $reified$Values, @com.redhat.ceylon.compiler.java.metadata.Ignore
             final com.redhat.ceylon.compiler.java.runtime.model.TypeDescriptor $reified$ProgramElement, @com.redhat.ceylon.compiler.java.metadata.Name("annotationType")
             @com.redhat.ceylon.compiler.java.metadata.TypeInfo(
-                    value = "ceylon.language.meta.model::Class<ceylon.language::ConstrainedAnnotation<Value,Values,ProgramElement>,ceylon.language::Nothing>",
+                    value = "ceylon.language.meta.model::Class<out ceylon.language::ConstrainedAnnotation<Value,Values,ProgramElement>,ceylon.language::Nothing>",
                     erased = true)
             final ceylon.language.meta.model.Class annotationType, @com.redhat.ceylon.compiler.java.metadata.Name("programElement")
             @com.redhat.ceylon.compiler.java.metadata.TypeInfo(

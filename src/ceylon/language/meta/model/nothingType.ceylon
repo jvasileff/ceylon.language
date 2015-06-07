@@ -5,13 +5,13 @@ shared object nothingType satisfies Type<Nothing> {
     
     typeOf(Anything instance) => false;
     
-    exactly(Type<> type) => type == nothingType;
+    exactly(AnyType type) => type == nothingType;
     
-    supertypeOf(Type<> type) => exactly(type);
+    supertypeOf(AnyType type) => exactly(type);
     
-    subtypeOf(Type<> type) => true;
+    subtypeOf(AnyType type) => true;
     
-    shared actual Type<Other> union<Other>(Type<Other> type) => type;
+    shared actual Type<out Other> union<Other>(Type<out Other> type) => type;
     
-    shared actual Type<Nothing> intersection<Other>(Type<Other> type) => this;
+    shared actual Type<Nothing> intersection<Other>(Type<out Other> type) => this;
 }

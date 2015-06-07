@@ -6,7 +6,7 @@ native class DeserRefImpl<out Instance,Outer>(context, id, clazz, outerRef)
 
   shared JsDeserCtxt context;
   shared actual Object id;
-  shared actual ClassModel<Instance> clazz;
+  shared actual ClassModel<out Instance> clazz;
   shared Reference<Outer>? outerRef;
 
   shared actual native Instance instance();

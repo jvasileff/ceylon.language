@@ -12,5 +12,5 @@ interface Reference<out Instance> {
     shared formal Object id;
     
     "The class of the instance."
-    shared formal ClassModel<Instance> clazz;
+    shared formal ClassModel<out Instance> clazz;
 }

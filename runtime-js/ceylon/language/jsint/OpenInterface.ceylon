@@ -4,18 +4,18 @@ import ceylon.language.meta.declaration {
 }
 import ceylon.language.meta.model {
   Interface, Member, ClassOrInterface, MemberInterface,
-  AppliedType=Type
+  AppliedType=Type, AnyType
 }
 import ceylon.language {
     AnnotationType=Annotation
 }
 
 shared native class OpenInterface(shared Package pkg, shared Object meta) satisfies InterfaceDeclaration {
-  shared actual native Interface<Type> interfaceApply<Type=Anything>(AppliedType<Anything>* typeArguments);
-  shared actual native MemberInterface<Container, Type> memberInterfaceApply<Container=Nothing, Type=Anything>(AppliedType<Object> containerType, AppliedType<Anything>* typeArguments);
-  shared actual native Interface<Type> apply<Type=Anything>(AppliedType<Anything>* typeArguments);
+  shared actual native Interface<Type> interfaceApply<Type=Anything>(AnyType* typeArguments);
+  shared actual native MemberInterface<Container, Type> memberInterfaceApply<Container=Nothing, Type=Anything>(AppliedType<out Object> containerType, AnyType* typeArguments);
+  shared actual native Interface<Type> apply<Type=Anything>(AnyType* typeArguments);
   shared actual native Member<Container, ClassOrInterface<Type>> & ClassOrInterface<Type> 
-    memberApply<Container=Nothing, Type=Anything>(AppliedType<Object> containerType, AppliedType<Anything>* typeArguments);
+    memberApply<Container=Nothing, Type=Anything>(AppliedType<out Object> containerType, AnyType* typeArguments);
 
   shared actual native Kind[] memberDeclarations<Kind>() 
             given Kind satisfies NestableDeclaration;

@@ -16,5 +16,5 @@ shared sealed interface ValueModel<out Get=Anything, in Set=Nothing>
     shared formal actual ValueDeclaration declaration;
     
     "This value's closed type."
-    shared formal ClosedType<Get> type;
+    shared formal ClosedType<out Get> type;
 }

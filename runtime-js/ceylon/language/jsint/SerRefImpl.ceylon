@@ -6,5 +6,5 @@ native class SerRefImpl<out Instance>(shared JsSerCtxt context, shared actual Ob
   shared actual Instance instance() => inst;
   shared actual String string => "``id`` => ``inst else "null"``";
   shared actual native void serialize(Deconstructor deconstructor);
-  shared actual native ClassModel<Instance> clazz;
+  shared actual native ClassModel<out Instance> clazz;
 }

@@ -8,7 +8,7 @@ import ceylon.language.meta.model { Class }
      value isShared = optionalAnnotation(`SharedAnnotation`, `value process`) exists;
  "
 shared Value? optionalAnnotation<Value, in ProgramElement>(
-            Class<OptionalAnnotation<Value,ProgramElement>> annotationType,
+            Class<out OptionalAnnotation<Value,ProgramElement>> annotationType,
             ProgramElement programElement)
         given Value satisfies OptionalAnnotation<Value,ProgramElement>
         given ProgramElement satisfies Annotated { 

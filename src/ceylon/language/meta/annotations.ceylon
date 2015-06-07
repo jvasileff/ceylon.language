@@ -19,7 +19,7 @@ import ceylon.language.meta.model { Class }
  
  The annotations may be returned in any order."
 shared native Values annotations<Value, Values, in ProgramElement>(
-    Class<ConstrainedAnnotation<Value,Values,ProgramElement>> annotationType,
+    Class<out ConstrainedAnnotation<Value,Values,ProgramElement>> annotationType,
     ProgramElement programElement)
         given Value satisfies ConstrainedAnnotation<Value,Values,ProgramElement>
         //given Values of <Value?> | <Value[]>
