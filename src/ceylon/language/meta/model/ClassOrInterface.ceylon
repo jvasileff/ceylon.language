@@ -25,7 +25,7 @@ shared sealed interface ClassOrInterface<Type=Anything>
     shared formal InterfaceModel<out Anything>[] satisfiedTypes;
 
     "The list of case values for this type. This omits any case type to only contain case values."
-    shared formal AnyType[] caseValues;
+    shared formal Type[] caseValues;
 
     // FIXME: move all these to Type
     // FIXME: introduce MemberClassOrInterface?

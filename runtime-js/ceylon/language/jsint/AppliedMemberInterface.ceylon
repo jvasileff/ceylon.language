@@ -41,7 +41,7 @@ shared native class AppliedMemberInterface<in Container, Type=Anything>()
   shared actual native Method<Container, Type, Arguments>? getDeclaredMethod<Container=Nothing, Type=Anything, Arguments=Nothing>(String name, AnyType* types) given Arguments satisfies Anything[];
   shared actual native Member<Container, Kind>? getDeclaredClassOrInterface<Container=Nothing, Kind=ClassOrInterface<Anything>>(String name, AnyType* types) given Kind satisfies ClassOrInterface<Anything>;
 
-  shared actual native AnyType[] caseValues;
+  shared actual native Type[] caseValues;
 
   shared actual native ClosedType<out Type|Other> union<Other>(ClosedType<out Other> other);
   shared actual native ClosedType<out Type&Other> intersection<Other>(ClosedType<out Other> other);

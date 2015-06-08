@@ -47,7 +47,7 @@ shared native class AppliedClass<Type=Anything, in Arguments=Nothing>() satisfie
   shared actual native Method<Container, Type, Arguments>? getDeclaredMethod<Container=Nothing, Type=Anything, Arguments=Nothing>(String name, ClosedType<out Anything>* types) given Arguments satisfies Anything[];
   shared actual native Member<Container, Kind>? getDeclaredClassOrInterface<Container=Nothing, Kind=ClassOrInterface<Anything>>(String name, ClosedType<out Anything>* types) given Kind satisfies ClassOrInterface<Anything>;
 
-  shared actual native AnyType[] caseValues;
+  shared actual native Type[] caseValues;
 
   shared actual native Constructor<Type, Arguments>? getConstructor<Arguments=Nothing>(String name)
     given Arguments satisfies Anything[];
