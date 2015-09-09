@@ -90,7 +90,7 @@ shared interface Set<out Element=Object>
     "Returns a new `Set` containing only the elements that 
      are present in both this set and the given `Set`."
     shared formal 
-    Set<Element&Other> intersection<Other>(Set<Other> set)
+    Set<Element> intersection<Other>(Set<Other> set)
             given Other satisfies Object;
     
     "Returns a new `Set` containing only the elements 
